@@ -120,3 +120,68 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom sidebar black theme enhancements */
+.sidebar-black {
+  --sidebar-background: 0 0% 0%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-border: 214 12% 20%;
+  --sidebar-hover: 0 0% 10%;
+  --sidebar-primary: 210 100% 50%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 0 0% 15%;
+  --sidebar-accent-foreground: 0 0% 100%;
+}
+
+.sidebar-button-hover {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-button-hover:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Responsive sidebar adjustments */
+@media (max-width: 768px) {
+  .sidebar-black {
+    --sidebar-width: 280px;
+    --sidebar-width-mobile: 280px;
+  }
+  
+  .sidebar-black .group:hover .group-hover\:ml-1 {
+    margin-left: 0.25rem;
+  }
+  
+  .sidebar-black .text-sm {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar-black {
+    --sidebar-width: 260px;
+    --sidebar-width-mobile: 260px;
+  }
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar-black ::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-black ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-black ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.sidebar-black ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
