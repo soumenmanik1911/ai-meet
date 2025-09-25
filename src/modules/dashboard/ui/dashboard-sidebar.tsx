@@ -40,7 +40,7 @@ import { DashboardUserButton } from "./dashboard-user-button";
     {
         icon :BotIcon,
         label :"Agents",
-        href :"/",
+        href :"/agents",
     }
   ];
   const SecondSection = [
