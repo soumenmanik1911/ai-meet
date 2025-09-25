@@ -1,8 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useTRPC } from "@/trpc/client";
-import { useQuery } from "@tanstack/react-query";
+
 
 const MeetMeLogo = () => (
   <svg width="56" height="56" viewBox="0 0 64 64">
@@ -18,16 +17,12 @@ const MeetMeLogo = () => (
 );
 
 export const HomeView = () => {
-  const trpc =useTRPC();
-  const {data}  = useQuery(trpc.hello.queryOptions({text :"starboy"}))
-
-  
 
 
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-white">
-      {data?.greeting }
+      home 
       
     </div>
   );
