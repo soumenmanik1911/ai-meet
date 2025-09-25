@@ -37,10 +37,6 @@ export function GeneratedAvatar({
     seed,
     size,
     backgroundColor: ["#1f2937", "#374151", "#4b5563"],
-    colors: ["#ffffff"],
-    fontSize: 24,
-    fontFamily: ["Arial", "Helvetica", "sans-serif"],
-    bold: true,
   });
 
   const svg = avatar.toString();
